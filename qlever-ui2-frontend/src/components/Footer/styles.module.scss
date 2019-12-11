@@ -1,0 +1,14 @@
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 1rem;
+
+    a {
+        color: white;
+    }
+}

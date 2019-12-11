@@ -1,0 +1,88 @@
+.rightActionItems {
+    :global(.mdc-button) {
+        color: var(--mdc-theme-on-primary, #fff) !important;
+
+        &:disabled,
+        &[disabled] {
+            opacity: 0.6;
+        }
+
+        @media only screen and (max-width: 767px) {
+            padding: 0;
+            min-width: 36px;
+            border-radius: 18px;
+
+            :global(.mdc-button__label) {
+                display: none;
+            }
+            :global(.mdc-button__icon) {
+                margin-right: 0;
+            }
+        }
+
+        &:before,
+        &:after {
+            background-color: var(--mdc-theme-on-primary, #fff);
+        }
+
+        &:not(:first-child) {
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+.header {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    position: inherit !important;
+}
+
+.link {
+    display: inline-flex;
+    flex: 1 1 auto;
+    align-items: center;
+    min-width: 0;
+    padding: 8px 12px;
+    z-index: 1;
+
+    text-decoration: none;
+    color: inherit;
+}
+
+.appBarTitle {
+    width: 100%;
+
+    padding-left: 0.3rem;
+}
+
+.switchContainer {
+    display: flex;
+    padding-right: 1rem;
+
+    > *:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    > *:not(:first-child) {
+        margin-left: 1rem;
+    }
+
+    align-self: center;
+    margin-left: 1rem;
+    @media (min-width: 768px) {
+        margin-left: 4rem;
+        margin-right: 1rem;
+    }
+
+    label {
+        color: white;
+    }
+}
+
+
+.shortcutList {
+    margin-top: 1rem !important;
+}

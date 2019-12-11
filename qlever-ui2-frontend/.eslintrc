@@ -1,0 +1,42 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "plugins": [
+        "react",
+        "react-hooks"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2018
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        "semi": "off",
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}],
+        "require-atomic-updates": "off"
+    },
+    "globals": {
+        "__DEV__": "readonly",
+        "__COMMIT_HASH__": "readonly",
+        "__COMMIT_HASH_LONG__": "readonly"
+    }
+}

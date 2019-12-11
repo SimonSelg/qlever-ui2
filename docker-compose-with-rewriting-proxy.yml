@@ -1,0 +1,16 @@
+version: '3'
+services:
+    nginx-proxy:
+        image: nginx:alpine
+        ports:
+          - "9090:8080"
+        volumes:
+            - ./nginx-proxy.conf:/etc/nginx/nginx.conf
+    qlever-ui2:
+        build:
+           context: .
+        ports:
+            - "8080:8080"
+        environment:
+            - WIKIDATA_FRONTEND_API=http://alicudi.informatik.privat:7001
+            - QLEVER_API=http://qlever.cs.uni-freiburg.de/api/wikidata-full

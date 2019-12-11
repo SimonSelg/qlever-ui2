@@ -1,0 +1,6 @@
+**/.git/objects/*
+**/.idea
+**/node_modules
+qlever-ui2-documentation
+docs
+misc

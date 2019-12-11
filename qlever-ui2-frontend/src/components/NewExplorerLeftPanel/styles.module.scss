@@ -1,0 +1,28 @@
+.panel {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.message,
+.visualization {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    .title {
+       margin-bottom: 0;
+    }
+}
