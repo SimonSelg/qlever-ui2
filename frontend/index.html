@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QLever UI2 - Documentation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/style/main.css" />
+    </head>
+    <body class="mdc-typography">
+
+
+<header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+            <span class="mdc-top-app-bar__title">QLever UI2</span>
+        </section>
+    </div>
+</header>
+<div class="mdc-top-app-bar--fixed-adjust">
+</div>
+
+<div class="body">
+    
+
+
+<aside>
+    <div class="mdc-drawer">
+        <div class="mdc-drawer__content">
+            <nav class="mdc-list">
+                
+                <a class="mdc-list-item" href="../index.html">
+                    <span class="mdc-list-item__text" >Overview</span>
+                </a>
+                
+
+                <div class="mdc-list-divider"></div>
+
+                
+                <a class="mdc-list-item">
+                    <span class="mdc-list-item__text">Getting Started</span>
+                    <i class="material-icons mdc-list-item__meta">chevron_right</i>
+                </a>
+                
+                
+                <a class="mdc-list-item subitem" href="../getting-started/installation.html">
+                    <span class="mdc-list-item__text">Installation</span>
+                </a>
+                
+                
+                <a class="mdc-list-item">
+                    <span class="mdc-list-item__text">Frontend UI</span>
+                    <i class="material-icons mdc-list-item__meta">chevron_right</i>
+                </a>
+                
+                
+                <a class="mdc-list-item subitem mdc-list-item--activated" href="index.html">
+                    <span class="mdc-list-item__text">Overview</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="tutorial.html">
+                    <span class="mdc-list-item__text">Tutorial</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="query-visualisation.html">
+                    <span class="mdc-list-item__text">Query Visualisation</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="extending-the-query.html">
+                    <span class="mdc-list-item__text">Extending the Query</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="manual-sparql-editing.html">
+                    <span class="mdc-list-item__text">Manual SPARQL editing</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="query-execution.html">
+                    <span class="mdc-list-item__text">Query Execution</span>
+                </a>
+                
+                
+                <a class="mdc-list-item">
+                    <span class="mdc-list-item__text">Backend Service</span>
+                    <i class="material-icons mdc-list-item__meta">chevron_right</i>
+                </a>
+                
+                
+                <a class="mdc-list-item subitem" href="../backend/index.html">
+                    <span class="mdc-list-item__text">Overview</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="../backend/wikidata-identifier-resolving.html">
+                    <span class="mdc-list-item__text">Wikidata Identifier Resolving</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="../backend/wikidata-entity-search.html">
+                    <span class="mdc-list-item__text">Wikidata Entity Search</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="../backend/extension-suggestion.html">
+                    <span class="mdc-list-item__text">Extension Suggestion</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="../backend/wikidata-query-execution.html">
+                    <span class="mdc-list-item__text">Wikidata Query Execution</span>
+                </a>
+                
+                
+            </nav>
+        </div>
+    </div>
+
+    <div class="mdc-drawer-scrim"></div>
+</aside>
+
+
+    <main>
+        <div class="page-header">
+            
+            
+            
+            
+            
+                
+                
+            
+            <h3 class="page-header__category">Frontend UI</h3>
+            
+            <h2 class="mdc-typography--headline2 page-header__title">Overview</h2>
+        </div>
+
+        <article class="page-content">
+            <p>The User Interface enables the user to graphically construct, visualize and execute SPARQL Queries, without knowledge of SPARQL or Wikidata. It is responsive and adapts to different screen sizes.</p>
+
+<p><img src="../assets/screenshots/ui-overview-main.png" alt="user interface overview" /></p>
+
+<p>On the left is the query visulisation. The right side provides the possibility to either extend the query, or to edit the sparql directly.</p>
+
+<p>There are some example queries to give the user some ideas to start with. An undo/redo history for the query exists, so you can redo and undo all query modifications.</p>
+
+<p>The query can be executed using the button on to right bottom. An option exists to trigger execution automatically.</p>
+
+<p>For more details, check the subpages of the different functionalities.</p>
+
+<h3 id="technical-details">Technical Details</h3>
+
+<p>The User Interface is an App written in <a href="https://reactjs.org">React.js</a>, using <a href="https://redux.js.org/">redux</a> for state management and <a href="https://github.com/molefrog/wouter">wouter</a> is used for routing. Every view corresponds its own url, meaning the browser forward/back buttons are fully supported.</p>
+
+<p>Queries are parsed using the <a href="https://github.com/RubenVerborgh/SPARQL.js">SPARQL.js</a> library, then converted into a graph which is rendered using  <a href="https://github.com/dagrejs/dagre-d3">dagre-d3</a>.</p>
+
+<p>The app is bundled using <a href="https://webpack.js.org">webpack</a>, to transpile javascript for older browsers <a href="https://babeljs.io/">babel</a> is used.</p>
+
+<h3 id="communication-with-backend-service">Communication with backend service</h3>
+<p>The frontend is fully runable on it’s own. Some parts need to communicate with the backend service tho, as it implements some functionalities the UI needs.</p>
+
+<p>These are: Wikidata Identifier Resolving, Wikidata Prefix Search, Wikidata Extension Suggestion and SPARQL Query Execution.</p>
+
+
+        </article>
+    </main>
+</div>
+
+<footer class="page-footer">
+    <p class="mdc-typography--body1">QLever UI2 is the computer science bachelor project of Simon Selg</p>
+</footer>
+
+<!--<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>-->
+<script src="../assets/main.js"></script>
+</body></html>
+

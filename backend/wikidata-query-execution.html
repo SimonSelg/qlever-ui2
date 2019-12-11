@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QLever UI2 - Documentation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/style/main.css" />
+    </head>
+    <body class="mdc-typography">
+
+
+<header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+            <span class="mdc-top-app-bar__title">QLever UI2</span>
+        </section>
+    </div>
+</header>
+<div class="mdc-top-app-bar--fixed-adjust">
+</div>
+
+<div class="body">
+    
+
+
+<aside>
+    <div class="mdc-drawer">
+        <div class="mdc-drawer__content">
+            <nav class="mdc-list">
+                
+                <a class="mdc-list-item" href="../index.html">
+                    <span class="mdc-list-item__text" >Overview</span>
+                </a>
+                
+
+                <div class="mdc-list-divider"></div>
+
+                
+                <a class="mdc-list-item">
+                    <span class="mdc-list-item__text">Getting Started</span>
+                    <i class="material-icons mdc-list-item__meta">chevron_right</i>
+                </a>
+                
+                
+                <a class="mdc-list-item subitem" href="../getting-started/installation.html">
+                    <span class="mdc-list-item__text">Installation</span>
+                </a>
+                
+                
+                <a class="mdc-list-item">
+                    <span class="mdc-list-item__text">Frontend UI</span>
+                    <i class="material-icons mdc-list-item__meta">chevron_right</i>
+                </a>
+                
+                
+                <a class="mdc-list-item subitem" href="../frontend/index.html">
+                    <span class="mdc-list-item__text">Overview</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="../frontend/tutorial.html">
+                    <span class="mdc-list-item__text">Tutorial</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="../frontend/query-visualisation.html">
+                    <span class="mdc-list-item__text">Query Visualisation</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="../frontend/extending-the-query.html">
+                    <span class="mdc-list-item__text">Extending the Query</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="../frontend/manual-sparql-editing.html">
+                    <span class="mdc-list-item__text">Manual SPARQL editing</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="../frontend/query-execution.html">
+                    <span class="mdc-list-item__text">Query Execution</span>
+                </a>
+                
+                
+                <a class="mdc-list-item">
+                    <span class="mdc-list-item__text">Backend Service</span>
+                    <i class="material-icons mdc-list-item__meta">chevron_right</i>
+                </a>
+                
+                
+                <a class="mdc-list-item subitem" href="index.html">
+                    <span class="mdc-list-item__text">Overview</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="wikidata-identifier-resolving.html">
+                    <span class="mdc-list-item__text">Wikidata Identifier Resolving</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="wikidata-entity-search.html">
+                    <span class="mdc-list-item__text">Wikidata Entity Search</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="extension-suggestion.html">
+                    <span class="mdc-list-item__text">Extension Suggestion</span>
+                </a>
+                
+                <a class="mdc-list-item subitem mdc-list-item--activated" href="wikidata-query-execution.html">
+                    <span class="mdc-list-item__text">Wikidata Query Execution</span>
+                </a>
+                
+                
+            </nav>
+        </div>
+    </div>
+
+    <div class="mdc-drawer-scrim"></div>
+</aside>
+
+
+    <main>
+        <div class="page-header">
+            
+            
+            
+                
+                
+            
+            <h3 class="page-header__category">Backend Service</h3>
+            
+            <h2 class="mdc-typography--headline2 page-header__title">Wikidata Query Execution</h2>
+        </div>
+
+        <article class="page-content">
+            <p>Executes the Wikidata Query on the QLever Engine.</p>
+
+<h3 id="api">API</h3>
+<p><code class="language-bash highlighter-rouge">/api/qlever/&lt;query&gt;/&lt;amount?&gt;</code>, where <code class="language-bash highlighter-rouge">&lt;query&gt;</code> is an <a href="https://tools.ietf.org/html/rfc4648#section-5">base64url</a> -encoded sparql query and the optional <code class="language-bash highlighter-rouge">&lt;amount?&gt;</code> controls the maximum amount of results to return. Default value is 100.</p>
+
+<h4 id="example">Example</h4>
+<p><code class="highlighter-rouge highlighter-rouge--big">GET /api/UFJFRklYIHdkOiA8aHR0cDovL3d3dy53aWtpZGF0YS5vcmcvZW50aXR5Lz4NClBSRUZJWCB3ZHQ6IDxodHRwOi8vd3d3Lndpa2lkYXRhLm9yZy9wcm9wL2RpcmVjdC8-DQpQUkVGSVggcmRmczogPGh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDEvcmRmLXNjaGVtYSM-DQpTRUxFQ1QgP2FjdG9yTGFiZWwgV0hFUkUgew0KICA_YWN0b3Igd2R0OlAxMDYgd2Q6UTMzOTk5IC4NCiAgP2FjdG9yIHJkZnM6bGFiZWwgP2FjdG9yTGFiZWwgLg0KICA_YWN0b3Igd2R0OlAxNDExIHdkOlExMDM5MTYgLg0KICA_YWN0b3Igd2R0OlAyNyB3ZDpRMTgzIC4NCiAgRklMVEVSIGxhbmdNYXRjaGVzKGxhbmcoP2FjdG9yTGFiZWwpLCAiZW4iKQ0KfQ/100</code></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+   </span><span class="nl">"query"</span><span class="p">:</span><span class="s2">"PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;</span><span class="se">\n</span><span class="s2">PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;</span><span class="se">\n</span><span class="s2">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="se">\n</span><span class="s2">SELECT ?actorLabel WHERE {</span><span class="se">\n</span><span class="s2">  ?actor wdt:P106 wd:Q33999 .</span><span class="se">\n</span><span class="s2">  ?actor rdfs:label ?actorLabel .</span><span class="se">\n</span><span class="s2">  ?actor wdt:P1411 wd:Q103916 .</span><span class="se">\n</span><span class="s2">  ?actor wdt:P27 wd:Q183 .</span><span class="se">\n</span><span class="s2">  FILTER langMatches(lang(?actorLabel), </span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">)</span><span class="se">\n</span><span class="s2">}"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"status"</span><span class="p">:</span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"resultsize"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"selected"</span><span class="p">:[</span><span class="w">
+      </span><span class="s2">"?actorLabel"</span><span class="w">
+   </span><span class="p">],</span><span class="w">
+   </span><span class="nl">"runtimeInformation"</span><span class="p">:{</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"Join on ?actor"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"result_rows"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"result_cols"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"column_names"</span><span class="p">:[</span><span class="w">
+         </span><span class="s2">"?actor"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"?actorLabel"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"total_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"operation_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"was_cached"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"details"</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"children"</span><span class="p">:[</span><span class="w">
+         </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"Join on ?actor"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"result_rows"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"result_cols"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"column_names"</span><span class="p">:[</span><span class="w">
+               </span><span class="s2">"?actor"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"?actorLabel"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"total_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"operation_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"was_cached"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"details"</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"children"</span><span class="p">:[</span><span class="w">
+               </span><span class="p">{</span><span class="w">
+                  </span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"Join on ?actor"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"result_rows"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"result_cols"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"column_names"</span><span class="p">:[</span><span class="w">
+                     </span><span class="s2">"?actor"</span><span class="w">
+                  </span><span class="p">],</span><span class="w">
+                  </span><span class="nl">"total_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"operation_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"was_cached"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"details"</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"children"</span><span class="p">:[</span><span class="w">
+                     </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"IndexScan ?actor &lt;http://www.wikidata.org/prop/direct/P1411&gt; &lt;http://www.wikidata.org/entity/Q103916&gt;"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"result_rows"</span><span class="p">:</span><span class="mi">663</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"result_cols"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"column_names"</span><span class="p">:[</span><span class="w">
+                           </span><span class="s2">"?actor"</span><span class="w">
+                        </span><span class="p">],</span><span class="w">
+                        </span><span class="nl">"total_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"operation_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"was_cached"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"details"</span><span class="p">:{</span><span class="w">
+                           </span><span class="nl">"original_operation_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+                           </span><span class="nl">"original_total_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="nl">"children"</span><span class="p">:[</span><span class="w">
+
+                        </span><span class="p">]</span><span class="w">
+                     </span><span class="p">},</span><span class="w">
+                     </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"IndexScan ?actor &lt;http://www.wikidata.org/prop/direct/P27&gt; &lt;http://www.wikidata.org/entity/Q183&gt;"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"result_rows"</span><span class="p">:</span><span class="mi">225383</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"result_cols"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"column_names"</span><span class="p">:[</span><span class="w">
+                           </span><span class="s2">"?actor"</span><span class="w">
+                        </span><span class="p">],</span><span class="w">
+                        </span><span class="nl">"total_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"operation_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"was_cached"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"details"</span><span class="p">:{</span><span class="w">
+                           </span><span class="nl">"original_operation_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+                           </span><span class="nl">"original_total_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="nl">"children"</span><span class="p">:[</span><span class="w">
+
+                        </span><span class="p">]</span><span class="w">
+                     </span><span class="p">}</span><span class="w">
+                  </span><span class="p">]</span><span class="w">
+               </span><span class="p">},</span><span class="w">
+               </span><span class="p">{</span><span class="w">
+                  </span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"IndexScan ?actor @en@&lt;http://www.w3.org/2000/01/rdf-schema#label&gt; ?actorLabel"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"result_rows"</span><span class="p">:</span><span class="mi">42426063</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"result_cols"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"column_names"</span><span class="p">:[</span><span class="w">
+                     </span><span class="s2">"?actor"</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"?actorLabel"</span><span class="w">
+                  </span><span class="p">],</span><span class="w">
+                  </span><span class="nl">"total_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"operation_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"was_cached"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"details"</span><span class="p">:{</span><span class="w">
+                     </span><span class="nl">"original_operation_time"</span><span class="p">:</span><span class="mf">258.0</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"original_total_time"</span><span class="p">:</span><span class="mf">258.0</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"children"</span><span class="p">:[</span><span class="w">
+
+                  </span><span class="p">]</span><span class="w">
+               </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+         </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"IndexScan ?actor &lt;http://www.wikidata.org/prop/direct/P106&gt; &lt;http://www.wikidata.org/entity/Q33999&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"result_rows"</span><span class="p">:</span><span class="mi">201749</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"result_cols"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"column_names"</span><span class="p">:[</span><span class="w">
+               </span><span class="s2">"?actor"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"total_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"operation_time"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"was_cached"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"details"</span><span class="p">:{</span><span class="w">
+               </span><span class="nl">"original_operation_time"</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="w">
+               </span><span class="nl">"original_total_time"</span><span class="p">:</span><span class="mf">1.0</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"children"</span><span class="p">:[</span><span class="w">
+
+            </span><span class="p">]</span><span class="w">
+         </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"res"</span><span class="p">:[</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+         </span><span class="s2">"</span><span class="se">\"</span><span class="s2">Emil Jannings</span><span class="se">\"</span><span class="s2">@en"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+   </span><span class="p">],</span><span class="w">
+   </span><span class="nl">"time"</span><span class="p">:{</span><span class="w">
+      </span><span class="nl">"total"</span><span class="p">:</span><span class="s2">"8.083ms"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"computeResult"</span><span class="p">:</span><span class="s2">"7.995ms"</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+
+
+        </article>
+    </main>
+</div>
+
+<footer class="page-footer">
+    <p class="mdc-typography--body1">QLever UI2 is the computer science bachelor project of Simon Selg</p>
+</footer>
+
+<!--<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>-->
+<script src="../assets/main.js"></script>
+</body></html>
+

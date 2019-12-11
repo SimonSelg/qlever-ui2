@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QLever UI2 - Documentation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/style/main.css" />
+    </head>
+    <body class="mdc-typography">
+
+
+<header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+            <span class="mdc-top-app-bar__title">QLever UI2</span>
+        </section>
+    </div>
+</header>
+<div class="mdc-top-app-bar--fixed-adjust">
+</div>
+
+<div class="body">
+    
+
+
+<aside>
+    <div class="mdc-drawer">
+        <div class="mdc-drawer__content">
+            <nav class="mdc-list">
+                
+                <a class="mdc-list-item" href="../index.html">
+                    <span class="mdc-list-item__text" >Overview</span>
+                </a>
+                
+
+                <div class="mdc-list-divider"></div>
+
+                
+                <a class="mdc-list-item">
+                    <span class="mdc-list-item__text">Getting Started</span>
+                    <i class="material-icons mdc-list-item__meta">chevron_right</i>
+                </a>
+                
+                
+                <a class="mdc-list-item subitem" href="../getting-started/installation.html">
+                    <span class="mdc-list-item__text">Installation</span>
+                </a>
+                
+                
+                <a class="mdc-list-item">
+                    <span class="mdc-list-item__text">Frontend UI</span>
+                    <i class="material-icons mdc-list-item__meta">chevron_right</i>
+                </a>
+                
+                
+                <a class="mdc-list-item subitem" href="../frontend/index.html">
+                    <span class="mdc-list-item__text">Overview</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="../frontend/tutorial.html">
+                    <span class="mdc-list-item__text">Tutorial</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="../frontend/query-visualisation.html">
+                    <span class="mdc-list-item__text">Query Visualisation</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="../frontend/extending-the-query.html">
+                    <span class="mdc-list-item__text">Extending the Query</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="../frontend/manual-sparql-editing.html">
+                    <span class="mdc-list-item__text">Manual SPARQL editing</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="../frontend/query-execution.html">
+                    <span class="mdc-list-item__text">Query Execution</span>
+                </a>
+                
+                
+                <a class="mdc-list-item">
+                    <span class="mdc-list-item__text">Backend Service</span>
+                    <i class="material-icons mdc-list-item__meta">chevron_right</i>
+                </a>
+                
+                
+                <a class="mdc-list-item subitem" href="index.html">
+                    <span class="mdc-list-item__text">Overview</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="wikidata-identifier-resolving.html">
+                    <span class="mdc-list-item__text">Wikidata Identifier Resolving</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="wikidata-entity-search.html">
+                    <span class="mdc-list-item__text">Wikidata Entity Search</span>
+                </a>
+                
+                <a class="mdc-list-item subitem mdc-list-item--activated" href="extension-suggestion.html">
+                    <span class="mdc-list-item__text">Extension Suggestion</span>
+                </a>
+                
+                <a class="mdc-list-item subitem" href="wikidata-query-execution.html">
+                    <span class="mdc-list-item__text">Wikidata Query Execution</span>
+                </a>
+                
+                
+            </nav>
+        </div>
+    </div>
+
+    <div class="mdc-drawer-scrim"></div>
+</aside>
+
+
+    <main>
+        <div class="page-header">
+            
+            
+            
+                
+                
+            
+            <h3 class="page-header__category">Backend Service</h3>
+            
+            <h2 class="mdc-typography--headline2 page-header__title">Extension Suggestion</h2>
+        </div>
+
+        <article class="page-content">
+            <p>Computes query extensions for a given query an a wikidata entity (object or predicate) together with a ranking.</p>
+
+<h3 id="api">API</h3>
+<p><code class="language-bash highlighter-rouge">/api/query/&lt;query&gt;/extend/&lt;entity&gt;</code>, where <code class="language-bash highlighter-rouge">&lt;query&gt;</code> is an <a href="https://tools.ietf.org/html/rfc4648#section-5">base64url</a> -encoded sparql query and <code class="language-bash highlighter-rouge">&lt;entity&gt;</code> is an Wikidata Entity</p>
+
+<h4 id="example">Example</h4>
+<p><code class="highlighter-rouge highlighter-rouge--big">/api/query/UFJFRklYIHdkOiA8aHR0cDovL3d3dy53aWtpZGF0YS5vcmcvZW50aXR5Lz4NClBSRUZJWCB3ZHQ6IDxodHRwOi8vd3d3Lndpa2lkYXRhLm9yZy9wcm9wL2RpcmVjdC8-DQpQUkVGSVggcmRmczogPGh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDEvcmRmLXNjaGVtYSM-DQpTRUxFQ1QgP2FjdG9yID9hY3RvckxhYmVsIFdIRVJFIHsNCiAgP2FjdG9yIHdkdDpQMTA2IHdkOlEzMzk5OSAuDQogID9hY3RvciByZGZzOmxhYmVsID9hY3RvckxhYmVsIC4NCiAgRklMVEVSIGxhbmdNYXRjaGVzKGxhbmcoP2FjdG9yTGFiZWwpLCAiZW4iKQ0KfQ/extend/Q183</code></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+   </span><span class="nl">"extensions"</span><span class="p">:[</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+         </span><span class="s2">"PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;</span><span class="se">\n</span><span class="s2">PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;</span><span class="se">\n</span><span class="s2">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="se">\n</span><span class="s2">SELECT ?actor ?actorLabel WHERE {</span><span class="se">\n</span><span class="s2">  ?actor wdt:P106 wd:Q33999 .</span><span class="se">\n</span><span class="s2">  ?actor rdfs:label ?actorLabel .</span><span class="se">\n</span><span class="s2">  ?actor wdt:P27 wd:Q183 .</span><span class="se">\n</span><span class="s2">  FILTER langMatches(lang(?actorLabel), </span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">)</span><span class="se">\n</span><span class="s2">}"</span><span class="p">,</span><span class="w">
+         </span><span class="mi">7222</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+         </span><span class="s2">"PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;</span><span class="se">\n</span><span class="s2">PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;</span><span class="se">\n</span><span class="s2">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="se">\n</span><span class="s2">SELECT ?actor ?actorLabel WHERE {</span><span class="se">\n</span><span class="s2">  ?actor wdt:P106 wd:Q33999 .</span><span class="se">\n</span><span class="s2">  ?actor rdfs:label ?actorLabel .</span><span class="se">\n</span><span class="s2">  ?actor wdt:P19 wd:Q183 .</span><span class="se">\n</span><span class="s2">  FILTER langMatches(lang(?actorLabel), </span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">)</span><span class="se">\n</span><span class="s2">}"</span><span class="p">,</span><span class="w">
+         </span><span class="mi">99</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+         </span><span class="s2">"PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;</span><span class="se">\n</span><span class="s2">PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;</span><span class="se">\n</span><span class="s2">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="se">\n</span><span class="s2">SELECT ?actor ?actorLabel WHERE {</span><span class="se">\n</span><span class="s2">  ?actor wdt:P106 wd:Q33999 .</span><span class="se">\n</span><span class="s2">  ?actor rdfs:label ?actorLabel .</span><span class="se">\n</span><span class="s2">  ?actor wdt:P1532 wd:Q183 .</span><span class="se">\n</span><span class="s2">  FILTER langMatches(lang(?actorLabel), </span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">)</span><span class="se">\n</span><span class="s2">}"</span><span class="p">,</span><span class="w">
+         </span><span class="mi">14</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+         </span><span class="s2">"PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;</span><span class="se">\n</span><span class="s2">PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;</span><span class="se">\n</span><span class="s2">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="se">\n</span><span class="s2">SELECT ?actor ?actorLabel WHERE {</span><span class="se">\n</span><span class="s2">  ?actor wdt:P106 wd:Q33999 .</span><span class="se">\n</span><span class="s2">  ?actor rdfs:label ?actorLabel .</span><span class="se">\n</span><span class="s2">  ?actor wdt:P20 wd:Q183 .</span><span class="se">\n</span><span class="s2">  FILTER langMatches(lang(?actorLabel), </span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">)</span><span class="se">\n</span><span class="s2">}"</span><span class="p">,</span><span class="w">
+         </span><span class="mi">14</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+         </span><span class="s2">"PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;</span><span class="se">\n</span><span class="s2">PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;</span><span class="se">\n</span><span class="s2">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="se">\n</span><span class="s2">SELECT ?actor ?actorLabel WHERE {</span><span class="se">\n</span><span class="s2">  ?actor wdt:P106 wd:Q33999 .</span><span class="se">\n</span><span class="s2">  ?actor rdfs:label ?actorLabel .</span><span class="se">\n</span><span class="s2">  ?actor wdt:P551 wd:Q183 .</span><span class="se">\n</span><span class="s2">  FILTER langMatches(lang(?actorLabel), </span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">)</span><span class="se">\n</span><span class="s2">}"</span><span class="p">,</span><span class="w">
+         </span><span class="mi">5</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+         </span><span class="s2">"PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;</span><span class="se">\n</span><span class="s2">PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;</span><span class="se">\n</span><span class="s2">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="se">\n</span><span class="s2">SELECT ?actor ?actorLabel WHERE {</span><span class="se">\n</span><span class="s2">  ?actor wdt:P106 wd:Q33999 .</span><span class="se">\n</span><span class="s2">  ?actor rdfs:label ?actorLabel .</span><span class="se">\n</span><span class="s2">  ?actor wdt:P119 wd:Q183 .</span><span class="se">\n</span><span class="s2">  FILTER langMatches(lang(?actorLabel), </span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">)</span><span class="se">\n</span><span class="s2">}"</span><span class="p">,</span><span class="w">
+         </span><span class="mi">2</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+         </span><span class="s2">"PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;</span><span class="se">\n</span><span class="s2">PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;</span><span class="se">\n</span><span class="s2">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="se">\n</span><span class="s2">SELECT ?actor ?actorLabel WHERE {</span><span class="se">\n</span><span class="s2">  ?actor wdt:P106 wd:Q33999 .</span><span class="se">\n</span><span class="s2">  ?actor rdfs:label ?actorLabel .</span><span class="se">\n</span><span class="s2">  ?actor wdt:P495 wd:Q183 .</span><span class="se">\n</span><span class="s2">  FILTER langMatches(lang(?actorLabel), </span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">)</span><span class="se">\n</span><span class="s2">}"</span><span class="p">,</span><span class="w">
+         </span><span class="mi">2</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+         </span><span class="s2">"PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;</span><span class="se">\n</span><span class="s2">PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;</span><span class="se">\n</span><span class="s2">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="se">\n</span><span class="s2">SELECT ?actor ?actorLabel WHERE {</span><span class="se">\n</span><span class="s2">  ?actor wdt:P106 wd:Q33999 .</span><span class="se">\n</span><span class="s2">  ?actor rdfs:label ?actorLabel .</span><span class="se">\n</span><span class="s2">  ?actor wdt:P937 wd:Q183 .</span><span class="se">\n</span><span class="s2">  FILTER langMatches(lang(?actorLabel), </span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">)</span><span class="se">\n</span><span class="s2">}"</span><span class="p">,</span><span class="w">
+         </span><span class="mi">1</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+   </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="technical-details">Technical Details</h3>
+<p>This works internally by building one or multiple SPARQL Queries  and running them against QLever to and aggregating the results.</p>
+
+<p>This hat lots of improvement potential. One could Interface with QLever directly instead of using SPARQL Queries for a performance boost.</p>
+
+<h3 id="notes">Notes</h3>
+<p>There is also <code class="language-bash highlighter-rouge">/api/query/&lt;query&gt;/options/qualifiers</code> and <code class="language-bash highlighter-rouge">/api/query/&lt;query&gt;/options/predicates</code>, which return a list of possible predicates and qualifiers to extend the query with.</p>
+
+<p>These are <strong>not</strong> used by the frontend. It could be used to implement a “suggest me an extension” functionality. I didn’t have any more time left to implement an UI for it.</p>
+
+<p>Also, it fails or takes a really long time on queries that return too many results / are not restrictive enough.</p>
+
+
+        </article>
+    </main>
+</div>
+
+<footer class="page-footer">
+    <p class="mdc-typography--body1">QLever UI2 is the computer science bachelor project of Simon Selg</p>
+</footer>
+
+<!--<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>-->
+<script src="../assets/main.js"></script>
+</body></html>
+
