@@ -3,9 +3,9 @@ module.exports = function(api) {
     const config = {
         "presets": [
             ["@babel/preset-env", {
-                "targets": {
-                    "browsers": ["last 2 Chrome versions", "last 2 Firefox versions"]
-                }
+                useBuiltIns: "usage",
+                corejs: 3,
+                loose: true
             }],
             "@babel/preset-react",
             "@babel/preset-flow"
