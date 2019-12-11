@@ -1,0 +1,37 @@
+.outerContainer {
+   display: flex;
+    flex-direction: column;
+}
+
+.container {
+    padding: 1rem;
+    height: 100%;
+    flex: 1;
+    display: flex;
+}
+
+.editor {
+    margin-top: 1rem;
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    display: flex;
+
+    // todo: solve this the nice way in the sub component
+    > div:first-child {
+        flex: 1;
+        display: flex;
+        max-width: 100%;
+        > div {
+            flex: 1;
+        }
+    }
+}
+
+.actions {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

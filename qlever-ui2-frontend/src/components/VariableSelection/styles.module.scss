@@ -1,0 +1,46 @@
+.title {
+    margin: 0.25rem 0;
+    display: block;
+}
+
+.variableGroup {
+    border: 1px dotted black;
+    border-radius: 0.5rem;
+    // display: inline-block;
+    padding-right: 5px;
+
+    display: inline-flex;
+    flex-direction: column;
+    margin: 5px;
+
+    // width: 100%;
+
+    > *:last-child {
+        margin-top: -15px;
+    }
+}
+
+.labelCheckboxes {
+    flex: 1;
+    margin: -5px -5px -5px -5px !important;
+}
+
+.variableEditGroup {
+    display: flex;
+    align-items: center;
+
+    flex: 1 1 0;
+}
+
+.checkBox {
+    flex-grow: 1;
+}
+
+.editIcon {
+    padding: 0 !important;
+    font-size: 15px !important;
+    height: 20px !important;
+    width: 20px !important;
+    margin: -2px 0 0 5px !important;
+    opacity: 0.6;
+}

@@ -1,0 +1,62 @@
+@import 'theme';
+@import '~@material/theme/mdc-theme.scss';
+
+// ------------------------------------------
+// import all material styles that are used
+//   for a list of all used packages, check
+//   the package.json, look for @rmwc/*
+// ------------------------------------------
+
+// button
+@import '~@material/button/mdc-button.scss';
+
+// card
+@import '~@material/card/mdc-card.scss';
+// @import '~@material/button/mdc-button.scss';
+@import '~@material/icon-button/mdc-icon-button.scss';
+
+// checkbox
+@import '~@material/checkbox/mdc-checkbox.scss';
+@import '~@material/form-field/mdc-form-field.scss';
+
+// elevation
+@import '~@material/elevation/mdc-elevation.scss';
+
+// data-table
+@import '~@rmwc/data-table/data-table.css';
+
+// dialog
+@import '~@material/dialog/mdc-dialog.scss';
+// @import '~@material/button/mdc-button.scss';
+
+// icon-button
+// @import '~@material/icon-button/mdc-icon-button.scss';
+
+// list
+@import '~@material/list/mdc-list.scss';
+
+// menu
+@import '~@material/menu/mdc-menu.scss';
+@import '~@material/menu-surface/mdc-menu-surface.scss';
+// @import '~@material/list/mdc-list.scss';
+
+// snackbar
+@import '~@material/snackbar/mdc-snackbar.scss';
+
+// tabs
+@import '~@material/tab-bar/mdc-tab-bar.scss';
+@import '~@material/tab/mdc-tab.scss';
+@import '~@material/tab-scroller/mdc-tab-scroller.scss';
+@import '~@material/tab-indicator/mdc-tab-indicator.scss';
+
+// textfield
+@import '~@material/textfield/mdc-text-field.scss';
+@import '~@material/floating-label/mdc-floating-label.scss';
+@import '~@material/notched-outline/mdc-notched-outline.scss';
+@import '~@material/line-ripple/mdc-line-ripple.scss';
+
+// top-app-bar
+@import '~@material/top-app-bar/mdc-top-app-bar.scss';
+
+// typography
+@import '~@material/typography/mdc-typography.scss';

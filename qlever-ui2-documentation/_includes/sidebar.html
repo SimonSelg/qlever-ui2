@@ -1,0 +1,33 @@
+{% assign mainSites = site.pages | where: "category", null | sort: 'order' %}
+{% assign categories = site.data.categories | sort: 'order' %}
+
+<aside>
+    <div class="mdc-drawer">
+        <div class="mdc-drawer__content">
+            <nav class="mdc-list">
+                {% for item in mainSites %}
+                <a class="mdc-list-item{% if page.url == item.url %} mdc-list-item--activated{% endif %}" href="{{item.url | relativize_url}}">
+                    <span class="mdc-list-item__text" >{{item.title}}</span>
+                </a>
+                {% endfor %}
+
+                <div class="mdc-list-divider"></div>
+
+                {% for category in categories %}
+                <a class="mdc-list-item">
+                    <span class="mdc-list-item__text">{{category.title }}</span>
+                    <i class="material-icons mdc-list-item__meta">chevron_right</i>
+                </a>
+                {% assign items = site.pages | where: "category", category.slug | sort: 'order' %}
+                {% for item in items %}
+                <a class="mdc-list-item subitem{% if page.url == item.url %} mdc-list-item--activated{% endif %}" href="{{item.url | relativize_url}}">
+                    <span class="mdc-list-item__text">{{item.title}}</span>
+                </a>
+                {% endfor %}
+                {% endfor %}
+            </nav>
+        </div>
+    </div>
+
+    <div class="mdc-drawer-scrim"></div>
+</aside>

@@ -1,0 +1,42 @@
+// apply a natural box layout model to all elements, but allowing components to change
+html {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+// force scrollbar to be always visible to avoid content jumps
+body {
+    overflow-y: scroll;
+}
+
+// fix dialog scroll
+body.mdc-dialog-scroll-lock {
+    overflow-y: scroll !important;
+
+    #app {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
+// page layout
+#app {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    > main {
+        flex: 1;
+    }
+
+    > header, > footer {
+        flex: none;
+    }
+}

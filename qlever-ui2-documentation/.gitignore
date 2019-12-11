@@ -1,0 +1,9 @@
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+.bundle
+assets/style/_material.scss
+assets/main.js
+node_modules

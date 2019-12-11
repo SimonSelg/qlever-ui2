@@ -1,0 +1,60 @@
+.svg {
+    // background-color: white;
+    background-color: white;
+    // max-width: 100%;
+    display: block;
+    // border: 1px solid black;
+
+    max-width: calc(100vw - 3rem);
+
+    overflow: hidden;
+    margin: 0; // auto;
+
+    :global(g.type-TK) > rect {
+        fill: #00ffd0;
+    }
+
+    text {
+        // font-weight: 300;
+        // font-family: "Helvetica Neue", Helvetica, Arial, sans-serf, serif;
+        font-size: 14px;
+    }
+
+    :global(.node) rect,
+    :global(.node) circle,
+    :global(.node) polygon,
+    :global(.node) ellipse {
+        stroke: #999;
+        fill: #fff;
+        stroke-width: 1.5px;
+    }
+
+    :global(.node.statement) {
+        text {
+            font-size: 12px;
+        }
+
+        ellipse {
+            stroke-width: 1px;
+            fill: rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    :global(.edgePath) path {
+        stroke: rgba(0, 0, 0, 0.8);
+        stroke-width: 1.5px;
+    }
+
+    :global(.edgePath.qualifier) path {
+        stroke: rgba(0, 0, 0, 0.6);
+    }
+
+    &.isDiff {
+        :global(.edgeLabel) text,
+        :global(.edgePath .path),
+        :global(.node) rect,
+        :global(.label) text {
+            opacity: 0.35;
+        }
+    }
+}

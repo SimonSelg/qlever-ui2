@@ -1,0 +1,26 @@
+.list {
+    overflow: hidden;
+
+    :global(.mdc-list-item__text *) {
+        // white-space: normal;
+    }
+}
+
+.card {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.title {
+    margin-bottom: 0.2rem;
+    text-align: center;
+}
+
+.status {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.keyboardSelected {
+    background-color: rgba(0,0,0,0.175);
+}

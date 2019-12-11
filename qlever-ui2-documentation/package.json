@@ -1,0 +1,27 @@
+{
+  "name": "qlever-ui2-documentation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "material-components-web": "^3.2.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:webpack": "webpack --watch --mode=development --config webpack.config.js",
+    "dev:jekyll": "bundler exec jekyll serve",
+    "build": "npm-run-all build:*",
+    "build:webpack": "webpack --mode=production --config webpack.config.js",
+    "build:jekyll": "bundler exec jekyll build"
+  }
+}

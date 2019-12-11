@@ -1,0 +1,142 @@
+.card {
+    position: relative;
+
+    .clearButton {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+.slide {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    img {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+    }
+}
+
+.graphCard {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 4px;
+
+    align-self: center;
+    align-items: center;
+}
+
+.code {
+    padding: .2em .4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27,31,35,.15);
+    border-radius: 3px;
+}
+
+.quote {
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: .25em solid #dfe2e5;
+}
+
+.videoCard {
+    margin: 0 auto 1rem auto;
+    max-width: 50rem;
+
+    > video {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.twoNoMargin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.two {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem;
+    > * {
+        margin: 0.4rem;
+        flex: 1;
+    }
+
+    .graphCard {
+        align-self: inherit;
+    }
+}
+
+.sparql,
+.graph {
+    align-self: center;
+}
+
+.inner {
+    flex: 1;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1260px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 1rem 1rem 1rem;
+
+    .title {
+        margin: 1.6rem 0;
+    }
+
+    .container {
+        width: 100%;
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p:first-child {
+            margin-top: 0;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .arrows {
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+
+            > * {
+                &:not(:first-child) {
+                    margin-left: 1rem;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    .success {
+
+    }
+
+}
+

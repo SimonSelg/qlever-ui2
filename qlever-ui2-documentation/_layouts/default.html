@@ -1,0 +1,42 @@
+{% include header.html %}
+
+<header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+            <span class="mdc-top-app-bar__title">{{site.title}}</span>
+        </section>
+    </div>
+</header>
+<div class="mdc-top-app-bar--fixed-adjust">
+</div>
+
+<div class="body">
+    {% include sidebar.html %}
+
+    <main>
+        <div class="page-header">
+            {% assign categoryName = site.title %}
+            {% for category in site.data.categories %}
+            {% if category.slug == page.category %}
+                {% assign categoryName = category.title %}
+                {% break %}
+            {% endif %}
+            {% endfor %}
+            {% if categoryName %}
+            <h3 class="page-header__category">{{ categoryName }}</h3>
+            {% endif %}
+            <h2 class="mdc-typography--headline2 page-header__title">{{page.title}}</h2>
+        </div>
+
+        <article class="page-content">
+            {{ content }}
+        </article>
+    </main>
+</div>
+
+<footer class="page-footer">
+    <p class="mdc-typography--body1">QLever UI2 is the computer science bachelor project of Simon Selg</p>
+</footer>
+
+{% include footer.html %}

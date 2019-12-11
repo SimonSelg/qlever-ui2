@@ -1,0 +1,12 @@
+$mdc-theme-primary: #3F51B5;
+$mdc-theme-secondary: #FF5722;
+//$mdc-theme-on-primary: #212121;
+//$mdc-theme-on-secondary: #757575;
+
+@import '../node_modules/material-components-web/material-components-web';
+
+@media only screen and (max-width: 799px) {
+    .mdc-drawer {
+        display: none;
+    }
+}
