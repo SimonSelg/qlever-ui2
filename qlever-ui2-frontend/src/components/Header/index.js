@@ -56,7 +56,7 @@ const Header = () => {
                                 icon="home"
                                 tag="a"
                                 target="_blank"
-                                href="https://c137.selg.me/qlever-ui2/"
+                                href="https://simonselg.github.io/qlever-ui2/"
                             >
                                 documentation
                             </Button>
