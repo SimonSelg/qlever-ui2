@@ -4,8 +4,12 @@
 
 QLever UI2 is the bachelor project I did at the [Chair of Algorithms and Data Structures of Prof. Dr. Hannah Bast](https://ad.informatik.uni-freiburg.de/front-page-en?set_language=en) as part of my computer science studies at the [Albert-Ludwigs-Universität Freiburg](https://www.uni-freiburg.de/). It was supervised by [Prof. Hannah Bast](https://ad.informatik.uni-freiburg.de/staff/bast)
 
+
 ## Demo
-The current version available at http://qlever.cs.uni-freiburg.de/simon-selg-ui/. See https://simonselg.github.io/qlever-ui2/ for the documentation.
+You can checkout my [hosted instance of qlever-ui2](https://qlever-ui2.c137.selg.me/). The project documentation can be found [here](https://simonselg.github.io/qlever-ui2/).
+
+![image](./qlever-ui2-documentation/assets/screenshots/ui-overview-main.png)
+
 
 ## Project structure
 - The `qlever-ui2-frontend` folder contains the frontend, which is just the UI
