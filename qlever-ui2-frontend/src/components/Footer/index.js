@@ -10,7 +10,7 @@ const Footer = () => (
         <Typography use="subtitle1">
             Revision{' '}
             <a
-                href={`https://ad-git.informatik.uni-freiburg.de/ad/qlever-ui/commit/${__COMMIT_HASH_LONG__}`}
+                href={`https://github.com/SimonSelg/qlever-ui2/commit/${__COMMIT_HASH_LONG__}`}
                 target="_blank"
                 rel="noopener noreferrer"
             >

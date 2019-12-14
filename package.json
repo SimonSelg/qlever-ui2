@@ -2,7 +2,7 @@
     "name": "qlever-ui",
     "version": "0.0.1",
     "main": "index.js",
-    "repository": "git@ad-git.informatik.uni-freiburg.de:ad/qlever-ui.git",
+    "repository": "https://github.com/SimonSelg/qlever-ui2.git",
     "author": "Simon Selg <selgs@cs.uni-freiburg.de>",
     "license": "unlicensed",
     "private": true,

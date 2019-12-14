@@ -6,7 +6,7 @@ QLever UI2 is the bachelor project I did at the [Chair of Algorithms and Data St
 
 
 ## Demo
-You can checkout my [hosted instance of qlever-ui2](https://qlever-ui2.c137.selg.me/). The project documentation can be found [here](https://simonselg.github.io/qlever-ui2/).
+You can checkout a [hosted instance of qlever-ui2 here](http://qlever.cs.uni-freiburg.de/simon-selg-ui/). The project documentation can be found [here](https://simonselg.github.io/qlever-ui2/).
 
 ![image](./qlever-ui2-documentation/assets/screenshots/ui-overview-main.png)
 
