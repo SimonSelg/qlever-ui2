@@ -139,7 +139,7 @@
 <p>The easiest way to run QLever UI2 is to use the provided docker container.</p>
 
 <p>First, make sure <a href="https://www.docker.com/">Docker</a> is installed and running. To build and start the container, run</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@ad-git.informatik.uni-freiburg.de:ad/qlever-ui.git
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/SimonSelg/qlever-ui2.git
 <span class="nb">cd </span>qlever-ui
 docker-compose up <span class="nt">-d</span> <span class="c"># this builds the docker-container if needed</span>
 </code></pre></div></div>
@@ -152,7 +152,7 @@ docker-compose up <span class="nt">-d</span> <span class="c"># this builds the d
 <p>For developing, a dockerless setup is recommended.</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># install dependencies</span>
-yarn 
+yarn
 
 <span class="c"># start the backend and the frontend dev server</span>
 yarn dev
