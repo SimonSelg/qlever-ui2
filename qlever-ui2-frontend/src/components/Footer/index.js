@@ -16,7 +16,7 @@ const Footer = () => (
             >
                 {__COMMIT_HASH__}
             </a>{' '}
-            | Powered by <a href="http://qlever.cs.uni-freiburg.de">QLever</a>
+            | Powered by <a href="https://github.com/ad-freiburg/QLever">QLever</a>
         </Typography>
     </footer>
 )
