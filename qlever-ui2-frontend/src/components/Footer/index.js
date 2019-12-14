@@ -16,7 +16,14 @@ const Footer = () => (
             >
                 {__COMMIT_HASH__}
             </a>{' '}
-            | Powered by <a href="https://github.com/ad-freiburg/QLever">QLever</a>
+            | Powered by{' '}
+            <a
+                href="https://github.com/ad-freiburg/QLever"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                QLever
+            </a>
         </Typography>
     </footer>
 )
