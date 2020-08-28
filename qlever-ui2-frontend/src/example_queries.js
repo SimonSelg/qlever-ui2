@@ -8,8 +8,8 @@ SELECT ?dateOfBirth ?actorLabel ?spouseLabel WHERE {
   ?actor rdfs:label ?actorLabel .
   ?actor wdt:P26 ?spouse .
   ?spouse rdfs:label ?spouseLabel .
-  FILTER langMatches(lang(?actorLabel), "en") .
-  FILTER langMatches(lang(?spouseLabel), "en") .
+  FILTER (LANG(?actorLabel) = "en") .
+  FILTER (LANG(?spouseLabel) = "en")
 }
 `
 
@@ -20,7 +20,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?actor ?actorLabel WHERE {
   ?actor wdt:P106 wd:Q33999 .
   ?actor rdfs:label ?actorLabel .
-  FILTER langMatches(lang(?actorLabel), "en") 
+  FILTER (LANG(?actorLabel) = "en")
 }
 `
 
@@ -31,7 +31,7 @@ SELECT ?actorLabel WHERE {
   ?actor wdt:P106 wd:Q33999 .
   ?actor rdfs:label ?actorLabel .
   ?actor wdt:P1411 wd:Q103916 .
-  FILTER langMatches(lang(?actorLabel), "en")
+  FILTER (LANG(?actorLabel) = "en")
 }`
 
 const MINIMAL_QUALIFIER_QUERY = `PREFIX ps: <http://www.wikidata.org/prop/statement/>
@@ -46,7 +46,7 @@ SELECT ?actorLabel WHERE {
   ?actor p:P1411 ?statement .
   ?statement ps:P1411 wd:Q103916 .
   ?statement pq:P1686 ?work .
-  FILTER langMatches(lang(?actorLabel), "en") 
+  FILTER (LANG(?actorLabel) = "en")
 }
 
 `

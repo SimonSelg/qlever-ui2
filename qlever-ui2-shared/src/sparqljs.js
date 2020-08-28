@@ -7,12 +7,18 @@ export const parser = new SparqlParser({ factory: DataFactory })
 
 // generate sparql query from sparqljs data structure
 export function generateSpaqrl(query: SparqlJsResult) {
+    console.log(query)
     const sparql = generator.stringify(query)
+    console.log(sparql)
 
     // modify generated sparql query to be compatible with qlever
     return (
         sparql
+            // adapt langmatches syntax to qlever (probably not needed anymore, since qlever now uses the FILTER(LANG(?x) = 'de') syntax
             .replace(/FILTER\(LANGMATCHES\(LANG\((.+)\)\)/gm, 'FILTER langMatches(lang($1)')
+            // fix generation of FILTER(LANG(?var) = '..') constructs
+            .replace(/FILTER\(\(LANG\(([^)]+)\)\) =/gm, 'FILTER (LANG($1) =')
+            // fix URIs
             .replace(/"\^\^<http:\/\/www.\w3\.org\/2001\/XMLSchema#string>/gm, '"')
             // fix group by looking like GROUP BY (?test1) (?test2) (?test3) instead of GROUP BY ?test1 ?test2 ?test3
             .replace(

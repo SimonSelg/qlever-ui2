@@ -138,7 +138,7 @@ function findLanguageFilterForVariable(query, variable) {
     return query.where.findIndex(
         e =>
             e.type === 'filter' &&
-            e.expression.operator === 'langmatches' &&
+            ['langmatches', '='].includes(e.expression.operator) &&
             e.expression.args &&
             e.expression.args.length &&
             e.expression.args[0] &&
@@ -159,7 +159,7 @@ function addLanguageFilterIfNotExist(query, variable) {
             type: 'filter',
             expression: {
                 type: 'operation',
-                operator: 'langmatches',
+                operator: '=',
                 args: [
                     {
                         type: 'operation',
@@ -310,10 +310,17 @@ export function removeLabelsFromQuery(query: SparqlJsResult) {
         }
     }
 
-    // remove langmatches filter
+    // remove langmatches or lang filters
     for (let i = query.where.length - 1; i >= 0; i--) {
         const element = query.where[i]
-        if (element.type === 'filter' && element.expression.operator === 'langmatches') {
+        if (
+            element.type === 'filter' &&
+            ['langmatches', '='].includes(element.expression.operator) &&
+            element.expression.args &&
+            element.expression.args.length &&
+            element.expression.args[0] &&
+            element.expression.args[0].operator === 'lang'
+        ) {
             query.where.splice(i, 1)
         }
     }
