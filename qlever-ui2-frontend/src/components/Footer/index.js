@@ -8,13 +8,12 @@ const Footer = () => (
     <footer className={styles.footer}>
         <Typography use="headline6">Bachelor Project of Simon Selg</Typography>
         <Typography use="subtitle1">
-            Revision{' '}
             <a
-                href={`https://github.com/SimonSelg/qlever-ui2/commit/${__COMMIT_HASH_LONG__}`}
+                href="https://github.com/SimonSelg/qlever-ui2/"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                {__COMMIT_HASH__}
+                QLever UI2 on GitHub
             </a>{' '}
             | Powered by{' '}
             <a

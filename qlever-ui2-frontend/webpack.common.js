@@ -2,7 +2,6 @@ const webpack = require('webpack')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const childProcess = require('child_process')
 
 const materialFolder = path.dirname(
     require.resolve('@material/button/package.json')
@@ -31,12 +30,6 @@ const extractLoader = {
         hmr: devMode
     }
 }
-
-// get git info from command line
-const commitHash = childProcess
-    .execSync('git rev-parse --short HEAD')
-    .toString()
-const commitHashLong = childProcess.execSync('git rev-parse HEAD').toString()
 
 module.exports = {
     entry: ['./src/index.js'],
@@ -104,9 +97,7 @@ module.exports = {
             template: 'src/index.html'
         }),
         new webpack.DefinePlugin({
-            __DEV__: '(process.env.NODE_ENV !== "production")',
-            __COMMIT_HASH__: JSON.stringify(commitHash),
-            __COMMIT_HASH_LONG__: JSON.stringify(commitHashLong)
+            __DEV__: '(process.env.NODE_ENV !== "production")'
         }),
         new MiniCssExtractPlugin({
             filename: devMode ? '[name].css' : '[name].[hash].css',
