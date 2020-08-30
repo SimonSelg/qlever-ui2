@@ -26,3 +26,11 @@ RUN yarn --production
 COPY --from=node_builder /application /application
 
 CMD ["yarn", "production"]
+
+# # for easiest usage, please use docker-compose and the provided
+# # "docker-compose.yml" file to start this project. If you would like to run
+# # this docker container without docker-compose:
+
+# docker build -t qlever-ui2-<name> .
+# docker run -d -p 8080:8080 -e "WIKIDATA_FRONTEND_API=<url of wikidata frontend instance>" -e "QLEVER_API=<url of qlever instance>" --name qlever-ui2-<name> qlever-ui2-<name>
+

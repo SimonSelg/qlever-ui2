@@ -8,3 +8,12 @@ services:
         environment:
             - WIKIDATA_FRONTEND_API=http://alicudi.informatik.privat:7001
             - QLEVER_API=http://qlever.cs.uni-freiburg.de/api/wikidata-full
+
+# # to run qlever-ui2, edit the environment variables to match your environment.
+
+# # then startup the services using:
+# docker-compose up
+
+# # to run in headless deamon mode, you can use
+# docker-compose up -d
+# docker-compose down # to stop qlever-ui2 again
