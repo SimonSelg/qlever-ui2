@@ -7,9 +7,7 @@ export const parser = new SparqlParser({ factory: DataFactory })
 
 // generate sparql query from sparqljs data structure
 export function generateSpaqrl(query: SparqlJsResult) {
-    console.log(query)
     const sparql = generator.stringify(query)
-    console.log(sparql)
 
     // modify generated sparql query to be compatible with qlever
     return (
